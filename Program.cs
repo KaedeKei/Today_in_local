@@ -6,10 +6,6 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-DateTime today = DateTime.Now;
-DateTime newyear = new DateTime(2023, 12, 31);
-
-
 app.MapGet("/local", (string? language) => GetNow(language));
 app.Run();
 
